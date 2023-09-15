@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap');
+
+*{margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Poppins", sans-serif;
+  }
+
+body{
+  background-color:lightblue;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+.container{
+position:relative;
+width:100%;
+max-width:1000px;
+min-height:1000px;
+background-color: #fff;
+  display: grid;
+  margin:50px;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0,0,0,0.1)
+}
+
+.container .left_side 
+{
+  position:relative;
+  padding:40px;
+  background-color:#003147;
+}
+
+.profileText
+{
+position: relative;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding-bottom:20px;
+border-bottom:1px solid rgba(255 255 255 0.2);
+}
+
+.profileText .imgBx{
+position:relative;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  overflow:hidden;
+}
+
+.profileText.imgBximg{
+position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.profileText h2{
+color:#fff;
+  font-size:1.5em;
+  margin-top:20px;
+  text-transform:uppercase;
+  text-align:center;
+  font-weight:600;
+  line-height:1.4em;
+}
+.profileText h2 span {
+font-size:0.8em;
+  font-weight:300;
+}
+
+.ContactInfo{
+padding-top:40px;
+}
+
+.title{
+color:#fff;
+  text-transform:UPPERCASE;
+  font-weight:600;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+
+.ContactInfo ul{
+position:relative;
+}
+
+.ContactInfo ul li {
+position:relative;
+list-style:none;
+margin:10px 0;
+cursor:pointer;
+}
+
+.ContactInfo ul li .icon{
+display: inline-block;
+  width:30px;
+  font-size:18px;
+  color:#03a9f4;
+}
+
+ContactInfo ul li span{
+color:#fff;
+  font-weight:300;
+  
+}
+
+
+ContactInfo.education{
+margin-bottom:15px;
+}
+
+.ContactInfo.education h5{
+color:#03a9f4;
+  font-weight:500;
+}
+
+.ContactInfo.education h4 :nth-child(2){
+color:#fff;
+  font-weight:500;
+}
+
+.ContactInfo.education h4{
+color:#fff;
+  font-weight:300;
+}
+
+.ContactInfo .language .percent{
+  position:relative;
+  width:100%;
+  height:6px;
+  background:#081921;
+  display:block;
+margin-top:5px;
+}
+
+.ContactInfo.language.percent div{
+position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  background:#03a9f4;
+}
+
+
+
+
+.container.right_side
+{
+position:relative;
+padding:40px;
+background-color:#fff;}
+
+.about{
+margin-bottom:50px;
+}
+
+.about:last-child{
+margin-bottom:0;
+}
+
+.title2{
+color:#003147;
+  text-transform:upper-case;
+  letter-spacing:1px;
+  margin: bottom 2px;;
+}
+
+p{
+  color:#333;
+}
+
+.about.box{
+  display:flex;
+  flex-direction:row;
+  margin: 20px 0;
+}
+
+.about.box.year_company{
+  min-width:150px;
+}
+
+.about.box.year_company h5{
+  text-transform:uppercase;
+  color:#848c90;
+  font-weight:600;
+}
+
+.about.box.text h4{
+text-transform:uppercase;
+  font-size:16px;
+  color:#2a7da2;
+}
+
+.skills.box{
+position:relative;
+  width:100%;
+  display:grid;
+  grid-template-columns:150px 1fr;
+  Justify-content:center;
+  align-items:center;
+}
+
+.skills.box h4{
+text-transform:uppercase;
+  font-weight:500;
+  color:#848c99;
+}
+
+.skills.box.percent{
+position:relative;
+  width:100%;
+  height:10px;
+  background-color:#f0f0f0;
+  
+}
+
+.skills.box.percent div{
+position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  background-color:#03a9f4;
+}
+
+.interest ul{
+display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.interest ul li{
+list-style:none;
+  color:#333;
+  font-weight:500;
+  margin:10px 0;
+}
+
+.interest ul li .fa{
+color:#03a9f4;
+  font-size:18px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left_side">
+          <div class="profileText">
+            <div class="imgBx">
+      <img src="https://share.icloud.com/photos/02ZrHjBmw93U_FDxSXEPlu33g">
+            
+            </div>
+            <h2> Great-Jubilee Onomen Ebhodaghe <br> <span> Web Developer </span></h2>
+          </div>
+       
+          <div class="ContactInfo">
+            <h3 class="title"> Contact Info</h3>
+            <ul>
+              <li>
+                <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                <span class="text"> +234 123 456 7891 </span>
+      </li>
+              <li>
+                <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                <span class="text">greatjubilee1@gmail.com</span>
+      </li>
+              
+       
+              <li>
+                <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                <span class="text">www.mywebsite.com</span>
+      </li>
+              <li>
+                <span class="icon"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span>
+                <span class="text"> https://www.linkedin.com/in/great-jubilee-ebhodaghe-59802b180</span>
+      </li>
+              <li>
+                <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i> </span>
+                <span class="text">Benin-City, Edo State, Nigeria  </span>
+      </li>
+      </ul>
+        </div>
+          <div class="ContactInfo education">
+            <h3 class="title"> Education</h3>
+            <ul>
+              <li>
+                <h5> 2017-Present </h5>
+                <h4> Bachelors degree in Petroleum Engineering </h4>
+                <h4> University of Benin</h4>
+       </li>
+      <li>
+                <h5> 2010-2016 </h5>
+                <h4> High School </h4>
+                <h4> F.S.T.C, Uromi, Edo State</h4>
+              </li>
+      </ul>
+        </div>
+          <div class="ContactInfo language">
+            <h3 class="title"> Languages</h3>
+            <ul>
+              <li>
+                <span class="text"> English</span>
+                <span class="percent">
+                  <div style="width:100%;"></div>
+                </span>
+              </li>
+               <li>
+                <span class="text"> French</span>
+                <span class="percent">
+                  <div style="width:35%;"></div>
+                </span>
+              </li>
+            </ul>
+        </div>
+          
+        </div>
+        
+          
+        <div class="right_side">
+          <div class="about">
+            <h2 class="title2">Profile</h2>
+            <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<br><br>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+          <div class="about">
+            <h2 class="title2">Experience</h2>
+            <div class="box">
+              <div class="year_company">
+                <h5> 2019-present</h5>
+                <h5> Company Name</h5>
+                  
+                </div>
+              <div class="text">
+                <h4> Senior Front-end Developer</h4>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem</p>
+            </div>
+      </div>
+             <div class="box">
+              <div class="year_company">
+                <h5> 2017-2019</h5>
+                <h5> Company Name</h5>
+                  
+                </div>
+              <div class="text">
+                <h4> Front-end Developer</h4>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem</p>
+            </div>
+      </div>
+             <div class="box">
+              <div class="year_company">
+                <h5> 2015-2017</h5>
+                <h5> Company Name</h5>
+                  
+                </div>
+              <div class="text">
+                <h4>Junior Front-end Developer</h4>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem</p>
+            </div>
+      </div>
+          </div>
+          <div class="about skills">
+            <h2 class="title2"> Professional Skills</h2>
+            <div class="box">
+              <h4> Html </h4>
+              <div class="percent">
+                <div style="width:95%"></div>
+              </div>
+          </div>
+            <div class="box">
+              <h4> CSS</h4>
+              <div class="percent">
+                <div style="width:90%"></div>
+              </div>
+          </div>
+            <div class="box">
+              <h4> Javascript</h4>
+              <div class="percent"></div>
+          </div>
+            <div class="about Interest">
+            <h2 class="title2">Interests</h2>
+              <ul>
+                <li>
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                
+                  Reading
+                </li>
+                <li>
+                  <i class="fa fa-internet-explorer" aria-hidden="true"></i>
+                
+                  Surfing
+                </li>
+                <li>
+                  <i class="fa fa-cutlery" aria-hidden="true"></i>
+                
+      Cooking</li>
+              </ul>
+             
+                
+        </div>
+          </div>
+</body>
+</html>

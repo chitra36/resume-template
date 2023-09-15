@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+  --primary-color: #34b459;
+  --secondary-color: #fece0c;
+  --violet-color: #56388d;
+  --light-color: #e7ebec;
+  --dark-color: #919191;
+  --txt-violet: var(--violet-color);
+  --txt-yellow: var(--secondary-color);
+  --txt-red: #ea5a48;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.txt-lg {
+  font-size: 24px;
+  margin: 0.5rem 0;
+  color: var(--light-color);
+}
+
+.txt-md {
+  font-size: 22px;
+  margin: 0.5rem 0;
+  text-transform: capitalize;
+  color: var(--light-color);
+}
+
+.txt-sm {
+  font-size: 16px;
+  margin: 0.5rem 0;
+  text-transform: capitalize;
+  color: var(--light-color);
+}
+
+.lead {
+  font-size: 12px;
+  margin: 0.5rem 0;
+  color: var(--light-color);
+}
+
+.txt-violet {
+  color: var(--txt-violet);
+}
+
+.txt-orange {
+  color: var(--secondary-color);
+}
+
+.txt-red {
+  color: var(--txt-red);
+}
+
+.txt-dark {
+  color: #333;
+}
+
+#main {
+  width: 100%;
+  margin: auto;
+  background-color: var(--secondary-color);
+  background-blend-mode: luminosity;
+  background-image: repeating-conic-gradient(
+    orange 0deg 10deg,
+    gray 10deg 20deg
+  );
+  position: absolute;
+  z-index: 0;
+  font-family: "Tilt Prism", cursive;
+}
+
+#container {
+  width: 80%;
+  background-color: var(--txt-red);
+  padding: 0.7rem;
+  border: var(--violet-color) solid 1px;
+  border-radius: 5px;
+  margin: 1rem auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#container::after {
+  content: "";
+  width: 100%;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 0px;
+  bottom: -10px;
+  border: var(--violet-color) solid 1px;
+  border-radius: 5px;
+  z-index: -2;
+}
+
+.body {
+  width: 80%;
+  padding: 0 0.7rem;
+}
+
+.intro {
+  margin-bottom: 1.5rem;
+}
+
+.name {
+  font-family: "Cabin Sketch", cursive !important;
+  font-size: 62px;
+  color: var(--secondary-color);
+  text-shadow: -1px 0 var(--txt-violet), 0 1px var(--txt-violet),
+    1px 0 var(--txt-violet), 0 -1px var(--txt-violet);
+  margin-top: 10px;
+}
+
+.years {
+  color: var(--light-color);
+}
+
+.desc {
+  width: 80%;
+  margin-left: 5.2rem;
+}
+
+.achivements {
+  background-color: var(--light-color);
+  border: var(--violet-color) solid 1px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 93%;
+  margin-top: 1rem;
+}
+
+.date {
+  color: #333;
+}
+
+.side {
+  width: 20%;
+}
+
+.profile img {
+  width: 150px;
+  height: 170px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: var(--violet-color) solid 1px;
+  position: relative;
+}
+
+.infos {
+  width: 150px;
+  border: var(--violet-color) solid 1px;
+  border-radius: 5px;
+  /* padding: .5rem; */
+}
+
+.progress {
+  width: 127px;
+  height: 10px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  position: relative;
+}
+
+.pr-3,
+.pr-4,
+.pr-5,
+.pr-6 {
+  background-color: var(--violet-color);
+}
+
+.pr-1::after,
+.pr-5::after,
+.pr-4::after {
+  content: "";
+  width: 100px;
+  height: 10px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 10px;
+  background-color: var(--txt-red);
+  border-radius: 5px;
+}
+
+.pr-2::after,
+.pr-3::after,
+.pr-6::after {
+  content: "";
+  width: 90px;
+  height: 10px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 10px;
+  background-color: var(--txt-red);
+  border-radius: 5px;
+}
+
+.langs {
+  background-color: var(--violet-color);
+  margin-top: 0px;
+  padding: 1rem 0.5rem;
+  margin-bottom: 0px;
+}
+
+.skills {
+  background-color: var(--secondary-color);
+  padding: 1rem 0.5rem;
+}
+
+.contact {
+  background-color: var(--violet-color);
+  padding: 1rem 0.5rem;
+}
+
+.social {
+  font-size: 10px;
+  color: var(--light-color);
+}
+
+.fa {
+  color: var(--primary-color);
+  font-size: 12px;
+}
+
+.copyright {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding: 1rem 0rem;
+  color: var(--violet-color);
+}
+
+.message {
+  display: none;
+  color: #34b459;
+  background-color: var(--light-color);
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .side {
+    width: 10%fygo;
+  }
+
+  .infos,
+  .profile img {
+    width: 130px;
+  }
+
+  .progress {
+    width: 100px;
+  }
+
+  .pr-1::after,
+  .pr-5::after,
+  .pr-4::after {
+    width: 70px;
+  }
+
+  .pr-2::after,
+  .pr-3::after,
+  .pr-6::after {
+    width: 40px;
+  }
+
+  .txt-md {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  #main {
+    display: none;
+  }
+
+  .message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    font-family: cursive, Arial, Helvetica, sans-serif;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <body>
+        <main id="main">
+          <div id="container">
+            <section class="body">
+              <article class="intro">
+                <h1 class="name">David Karim</h1>
+                <h2 class="txt-lg">Hi There!</h2>
+                <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo dignissimos
+                  nisi ad! Eaque quisquam distinctio omnis laboriosam doloremque quidem, aperiam ducimus
+                  dolore reprehenderit porro eveniet?
+                </p>
+              </article>
+              <article class="education">
+                <h2 class="txt-md txt-violet">education</h2>
+                <div class="grades">
+                  <p>
+                    <span class="years">2000-2012</span>
+                    <span class="txt-sm txt-violet">Degree Title/Major</span>
+                  </p>
+                  <p class="lead desc ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
+                    vero
+                    facere voluptatum deleniti culpa ut? Voluptas incidunt vitae porro sit!</p>
+                </div>
+                <div class="grades">
+                  <p>
+                    <span class="years">2012-2016</span>
+                    <span class="txt-sm txt-violet">Degree Title/Major</span>
+                  </p>
+                  <p class="lead desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit vero
+                    facere voluptatum deleniti culpa ut? Voluptas incidunt vitae porro sit!</p>
+                </div>
+                <div class="grades">
+                  <p>
+                    <span class="years">2016-2018</span>
+                    <span class="txt-sm txt-violet">Degree Title/Major</span>
+                  </p>
+                  <p class="lead desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit vero
+                    facere voluptatum deleniti culpa ut? Voluptas incidunt vitae porro sit!</p>
+                </div>
+              </article>
+      
+              <article class="achivements">
+                <h2 class="txt-md txt-violet">achievements</h2>
+                <p class="lead txt-dark">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut molestiae aperiam
+                  adipisci accusantium, impedit totam illum. Quas repellendus quibusdam vel?
+                </p>
+      
+                <p>
+                  <span class="date">2019</span>
+                  <span class="txt-violet txt-sm ">big project</span>
+                </p>
+                <p class="lead txt-dark">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quis
+                  corrupti ratione ipsa reiciendis cum neque reprehenderit doloremque quam incidunt?
+                </p>
+      
+                <p>
+                  <span class="date">2020</span>
+                  <span class="txt-violet txt-sm ">big project</span>
+                </p>
+                <p class="lead txt-dark">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quis
+                  corrupti ratione ipsa reiciendis cum neque reprehenderit doloremque quam incidunt?
+                </p>
+              </article>
+            </section>
+            <section class="side">
+              <article class="profile">
+                <img src="https://xsgames.co/randomusers/avatar.php?g=male" alt="User Profile " class="image">
+              </article>
+              <article class="infos">
+                <div class="langs txt-md txt-orange">languages
+                  <h2 class="txt-md txt-orange"></h2>
+                  <p class="txt-md">english</p>
+                  <div class="progress pr-1"></div>
+      
+                  <p class="txt-md">duestch</p>
+                  <div class="progress pr-2"></div>
+                </div>
+      
+                <div class="skills">
+                  <h2 class="txt-md txt-red">skills</h2>
+                  <p class="txt-md txt-violet ">html / css</p>
+                  <div class="progress pr-3"></div>
+      
+                  <p class="txt-md txt-violet ">wordpress</p>
+                  <div class="progress pr-4"></div>
+      
+                  <p class="txt-md txt-violet ">javascript</p>
+                  <div class="progress pr-5"></div>
+      
+                  <p class="txt-md txt-violet ">react js</p>
+                  <div class="progress pr-6"></div>
+                </div>
+      
+                <div class="contact">
+                  <h2 class="txt-md txt-red">contact me </h2>
+                  <p class="whatsapp">
+                    <span><i class="fa fa-whatsapp"></i></span>
+                    <span class="social">021-1111-2222-3333</span>
+                  </p>
+      
+                  <p class="instagram">
+                    <span><i class="fa fa-instagram"></i></span>
+                    <span class="social">@Karim-dev</span>
+                  </p>
+                  <p class="gmail">
+                    <span><i class="fa fa-google"></i></span>
+                    <span class="social">karimdev@gmail.com</span>
+                  </p>
+                </div>
+              </article>
+            </section>
+          </div>
+          <p class="txt-md copyright">&copy;Jafar Mirzapoor</p>
+        </main>
+        <p class="message">Please Change Your Browser Size To Dektop Size !</p>
+      </body>
+</body>
+</html>
